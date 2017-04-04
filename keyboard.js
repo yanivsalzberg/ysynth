@@ -19,6 +19,7 @@ $(document).ready(function () {
             $("#bx10").append("<b>do </b>");
             noteLog.push(1);
             console.log(noteLog);
+            // checkSimon()
           }
       })
     })
@@ -99,6 +100,9 @@ $(document).ready(function () {
             $("#bx10").append("<b>sol </b>");
             noteLog.push(5);
             console.log(noteLog);
+            if (noteLog === maryHadLambs) {
+              alert("yeah, mothafucka!!");
+            }
           }
       })
     })

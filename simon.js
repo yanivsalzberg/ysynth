@@ -1,6 +1,4 @@
 function simon() {
-
-
       nodeE4.gain.value = .6;
       setTimeout(function(){
         nodeE4.gain.value = 0; /*The volume of the audio*/
@@ -41,5 +39,4 @@ function simon() {
       setTimeout(function(){
         nodeE4.gain.value = 0; /*The volume of the audio*/
       }, 2600);
-
   };
