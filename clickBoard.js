@@ -41,3 +41,12 @@ function playC5(){
       nodeC5.gain.value = 0; /*The volume of the audio*/
     }, 100);
 };
+
+function mute(){
+  nodeC4.gain.value = 0;
+  nodeD4.gain.value = 0;
+  nodeE4.gain.value = 0;
+  nodeG4.gain.value = 0;
+  nodeA4.gain.value = 0;
+  nodeC5.gain.value = 0;
+}
