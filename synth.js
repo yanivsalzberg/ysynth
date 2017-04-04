@@ -109,3 +109,27 @@ oscillatorC5.frequency.value = 523.25;
 nodeC5.gain.value = 0;
 // Start the oscillator now
 oscillatorC5.start(synthC5.currentTime);
+
+
+
+
+function generalSynth (setFrequency, setGain, setWaveform) {
+
+/*Init the AudioContext and webkitAudioContext*/
+var synthC5 = new(window.AudioContext || window.webkitAudioContext)();
+/*Define oscillator and node*/
+var oscillatorC5 = synthC5.createOscillator();
+var nodeC5 = synthC5.createGain();
+/*Connect the oscillator to the node, and the node to the audio output*/
+oscillatorC5.connect(nodeC5);
+nodeC5.connect(synthC5.destination);
+/*The Waveform of the oscillator, other values are 'saw' or 'square'*/
+oscillatorC5.type = setWaveform;
+/*The Frequeny of the oscillator in hertz, 440 equals an "A4"*/
+oscillatorC5.frequency.value = setFrequency;
+/*The volume of the audio*/
+nodeC5.gain.value = setGain;
+// Start the oscillator now
+oscillatorC5.start(synthC5.currentTime);
+
+}
