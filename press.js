@@ -1,4 +1,4 @@
-Pressure.set('#center', {
+Pressure.set('#do', {
   change: function(force, event){
     console.log(force);
     var colorNum1 = Math.floor(force * 256);
@@ -7,5 +7,11 @@ Pressure.set('#center', {
     console.log("rgb(" + colorNum1 + "," + colorNum2 + "," + colorNum3 + ")");
     $("#center").css("background-color","rgb(" + colorNum1 + "," + colorNum2 + "," + colorNum3 + ")")
     console.log(colorNum1);
+
+
+    nodeC4.gain.value = force;
+
+
+
   }
 });
